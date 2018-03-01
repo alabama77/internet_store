@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Интернет-магазин</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  	<meta charset="utf-8">
+  	<meta name='viewport' content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 	<meta name=viewport content="width=device-width, initial-scale=1">
+ 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  	<script src="https://use.fontawesome.com/58eb9b9893.js"></script>
+
+</head>
+<body>
+	<div class="wrapper">
+		<nav></nav>
+
+		<div class="wrapper-left"></div>
+		<div class="wrapper-main">
+			{%  for tovar in tovars %}
+			<a class="item" href="/item/{{tovar.alias}}/">
+				<img src="{{tovar.image}}">
+				<span class="title">{{tovar.name}}</span>
+				<span class="price">{{tovar.price}} Рублей</span>
+			</a>
+			{%  endfor %}
+		</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+	font-size: 0;
+}
+
+.wrapper .wrapper-left {
+	width: 300px;
+	min-height: 600px;
+	background: blue;
+	display: inline-block;
+	vertical-align: top;
+}
+.wrapper .wrapper-main {
+	width: 800px;
+	margin-left: 50px;
+	min-height: 600px;
+	background: #eee;
+	display: inline-block;
+	vertical-align: top;
+}
+.wrapper .wrapper-main .item {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+	width: 240px;
+	min-height: 100px;
+}
+.wrapper .wrapper-main .item img {
+	display: block;
+	width: 230px;
+	height: 230px;
+}
+.wrapper. .wrapper-main .item span {
+}
+
+.wrapper .wrapper-main .item .title {
+	font-size: 14px;
+	display: block;
+	margin-top: 5px;
+}
+.wrapper .wrapper-main .item .price {
+	font-size: 15px;
+	display: block;
+	margin-top: 10px;
+}
+/*СТРАНИЦА ДЛЯ ТОВАРА*/
+/*______________________________________________*/
+
+.wrapper .item {
+	width: 600px;
+	min-height: 300px;
+	margin: 0 auto;
+
+}
+.wrapper .item .header h1 {
+	text-align: center;
+}
+.wrapper .item .full {
+	width: 400;
+	height: 600;
+}
+.wrapper .item .price {
+	margin-top: 10px;
+	display: block;
+}
