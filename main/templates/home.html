@@ -18,12 +18,16 @@
 <body>
 	<div class="wrapper">
 		<nav></nav>
-		<div class="item">
-			<div class="header"><h1>{{tovar.name}}</h1></div>
-			<img class="full" src="{{tovar.image}}" width="400" height="500" alt="Футболка">
-			<span class="price">{{tovar.price}} Рублей</span>
-			<a class="buy" href="#">Купить тупа</a>
+
+		<div class="store-name"><h1 class="title">Интернет-Магазин</h1></div>
+		<div class="categories">
+			<ul>
+				{% for category in categories %}
+				<li><a href="/{{category.alias}}/">{{category.name}}</a></li>
+				{% endfor %}
+			</ul>
 		</div>
+
 	</div>
 </body>
 </html>

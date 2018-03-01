@@ -23,6 +23,7 @@ from main import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r"^$", views.home, name="index.html"),
-    re_path(r"^item/(?P<alias>[^/]+)", views.item, name="item.html")
+    re_path(r"^item/(?P<alias>[^/]+)", views.item, name="item.html"),
+    re_path(r"^(?P<alias>[^/]+)", views.get_category, name="item.html")
 
 ]

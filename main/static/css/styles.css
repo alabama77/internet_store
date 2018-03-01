@@ -50,7 +50,7 @@
 .wrapper .item {
 	width: 600px;
 	min-height: 300px;
-	margin: 0 auto;
+
 
 }
 .wrapper .item .header h1 {
@@ -59,8 +59,20 @@
 .wrapper .item .full {
 	width: 400;
 	height: 600;
+	display: block;
+	margin: 0 auto;
 }
 .wrapper .item .price {
 	margin-top: 10px;
 	display: block;
+}
+.wrapper .item .buy {
+	margin-top: 5px;
+	display: block;
+	font-size: 14px;
+	color: #000;
+	text-align: center;
+}
+.wrapper .store-name .title {
+	font-size: 14px;
 }

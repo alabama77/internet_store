@@ -11,13 +11,10 @@ import string
 
 
 def home(request):
-	tovars = Item.objects.all()
-
+	category = Category.objects.all()
 	context = {
-		'title' : "HelloWorld",
-		'tovars' : tovars,
 	}
-	return HttpResponse(render_to_string('index.html', context))
+	return HttpResponse(render_to_string('home.html', context))
 
 def item(request, alias):
 	try:
@@ -27,6 +24,16 @@ def item(request, alias):
 
 	context = {"tovar" : tovar}
 	return HttpResponse(render_to_string('item.html', context))
+
+def get_category(request, alias):
+	try:
+		category = Category.objects.get(alias=alias)
+		tovars = Item.objects.filter(category=category)
+	except:
+		return Http404
+	context = {"tovars" : tovars,
+				"category" : category,}
+	return HttpResponse(render_to_string("index.html", context))
 
 
 	
