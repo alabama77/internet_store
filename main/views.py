@@ -28,5 +28,6 @@ def item(request, alias):
 	context = {"tovar" : tovar}
 	return HttpResponse(render_to_string('item.html', context))
 
+
 	
 
